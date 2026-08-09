@@ -1,18 +1,22 @@
-import Header from "./App/header"
-import Product1 from "./App/product1"
-import Product2 from "./App/product2"
-import Product3 from "./App/product3"
+import Product1 from "./component/product1"
+import Product2 from "./component/product2"
+import Product3 from "./component/product3"
+import './App.css'
+import Header from "./component/header"
 
 
 const App = () => {
   return (
     <div>
-      <Header/>
+    <Header/>
+    <div className="product-container">
+      
       <Product1/>
       <Product2/>
       <Product3/>
+      <a href="/about">About</a>
     </div>
-
+  </div>
   )
 }
 export default App;
