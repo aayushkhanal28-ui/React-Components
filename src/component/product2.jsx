@@ -1,18 +1,33 @@
-import Button from "./button";
-
 const Product2 = () => {
   const product = {
     name: "Mobile",
     price: 20000,
-    category: "Electronics"
+    category: "Electronics",
+    available: true,
+    icon: "📱"
   };
 
   return (
     <div className="product-card">
+
+      <div className="product-icon">
+        {product.icon}
+      </div>
+
       <h2>{product.name}</h2>
-      <p>Price: Rs. {product.price}</p>
-      <p>Category: {product.category}</p>
-      <Button/>
+
+      <p className="category">{product.category}</p>
+
+      <p className="price">
+        Rs. {product.price}
+      </p>
+
+      <p className="available">
+        ✓ Available
+      </p>
+
+      <button>View Details</button>
+
     </div>
   );
 };
